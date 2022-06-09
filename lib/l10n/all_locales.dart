@@ -4,8 +4,7 @@ class AllLocales {
   AllLocales._();
 
   static final all = [
-    const Locale("en", "English"),
-    const Locale("hi", "Hindi"),
+    const Locale("en", "US"),
+    const Locale("vi", "VN"),
   ];
-
 }

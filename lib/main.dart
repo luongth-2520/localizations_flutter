@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-
             supportedLocales: AllLocales.all,
             locale: Provider.of<LocaleProvider>(context)
                 .locale, // if its null it will equal to first locale of supportedLocales
@@ -56,8 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           PopupMenuButton<Locale>(
             onSelected: (value) {
-              Provider.of<LocaleProvider>(context, listen: false)
-                  .setLocale(value);
+              Provider.of<LocaleProvider>(context, listen: false).setLocale(value);
             },
             itemBuilder: (BuildContext context) {
               return AllLocales.all.map((Locale choice) {
@@ -71,25 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Container(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              AppLocalizations.of(context).frieghtInRs + "50",
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              AppLocalizations.of(context).gst("5") + "10",
-              style: Theme.of(context).textTheme.headline4,
-            ),
-            Text(
-              "${AppLocalizations.of(context).total}: 60",
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      body: Center(
+        child: Text(
+          AppLocalizations.of(context).yourName("A SaMa"),
+          style: Theme.of(context).textTheme.headline4,
         ),
       ),
     );

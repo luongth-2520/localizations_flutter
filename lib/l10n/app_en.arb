@@ -1,16 +1,12 @@
  {
-         "frieghtInRs": "Freight (Rs)",
-
-         "gst" : "GST ({rate}%) (Rs)",
-         "@gst":{
-          "description": "Enter % for gst",
+         "yourName" : "Your name: {name}",
+         "@yourName":{
+          "description": "Enter your name",
           "placeholders": {
-            "rate": {
+            "name": {
               "type":"String"
             }
           }
          } ,
-        
-        "language": "English",
-        "total": "Total"
+        "language": "English"
 }
